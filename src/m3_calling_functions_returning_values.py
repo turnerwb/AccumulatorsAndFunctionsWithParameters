@@ -203,8 +203,7 @@ def digits_in_cube(n):
     ####################################################################
     # ------------------------------------------------------------------
 
-    cube = n ** 3
-    answer = sum_of_digits(cube)
+    answer = sum_of_digits(n**3)
     return answer
 
 
@@ -273,15 +272,14 @@ def digits_in_power(n, k):
     ####################################################################
     # ------------------------------------------------------------------
 
-    power = n ** k
-    answer = sum_of_digits(power)
+    answer = sum_of_digits(n**k)
     return answer
 
 
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -345,16 +343,14 @@ def fancy_sums_of_digits(n):
             -- so this function returns 124309.
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-    x = sum_of_digits(n ** 1000)
-    y = sum_of_digits(n ** 999)
-    answer = sum_of_digits(x**y)
+    answer = sum_of_digits(sum_of_digits(n ** 1000) ** sum_of_digits(n ** 999))
     return answer
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
